@@ -1,10 +1,10 @@
 The files in this repository were used to configure the network depicted below.
 
-https://github.com/jjennings55/GT-ELK-Project/blob/47ef71da02be33c6e8bc34af9cc3ff511dc98d91/Diagrams/Elk%20Network%20Cloud%20Diagram.pptx
+
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the yml and config file may be used to install only certain pieces of it, such as Filebeat.
 
-https://github.com/jjennings55/GT-ELK-Project.git
+https://github.com/taylorrkramerr/ELK-Project.git
 
 This document contains the following details:
 
@@ -58,7 +58,7 @@ This playbook implements the following tasks:
 
 Specify a group of machines with a remote user:
 
-name: Configure Elk VM with Docker hosts: elk remote_user: azureuser become: true tasks:
+name: Configure Elk VM with Docker hosts: elk remote_user: asysadmin become: true tasks:
 Install Docker and Python3-pip:
 
 name: Install docker.io apt: force_apt_get: yes update_cache: yes name: docker.io state: present
@@ -81,7 +81,7 @@ Enable Docker on startup:
 name: Enable service docker on boot systemd: name: docker state: started enabled: yes
 The following screenshot displays the result of running docker ps after successfully configuring the ELK instance.
 
-https://github.com/jjennings55/GT-ELK-Project/blob/504523048939d12d6d33457d72f8bfbb4a1c59b1/Screenshots/Elk%20Status.JPG
+
 
 Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -98,7 +98,7 @@ Filebeat logs events, and Metric beat provides metrics and system statistics
 Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned:
 
-SSH into the control node and follow the steps below: For ELK VM Configuration: -Copy the https://github.com/jjennings55/GT-ELK-Project/blob/47ef71da02be33c6e8bc34af9cc3ff511dc98d91/Ansible/install-elk.yml.txt -Run the playbook with ansible-playbook install-elk.yml
+SSH into the control node and follow the steps below: For ELK VM Configuration: 
 
 For Filebeat:
 
